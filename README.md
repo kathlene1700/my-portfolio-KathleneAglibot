@@ -1,3 +1,4 @@
 # my-portfolio-KathleneAglibot
 
-This is my Resume
+The following image is my Resume
+(HTML, CSS and JS)
