@@ -3,5 +3,6 @@
 The following image is my Resume
 (HTML, CSS and JS)
 
-![Screenshot from 2021-08-19 19-31-23](https://user-images.githubusercontent.com/88710657/130062219-03e08417-5b2e-49e4-96d5-767b5c997e93.png)
+![resume](https://user-images.githubusercontent.com/88710657/130063414-efed5ec1-f6f1-417f-8b04-3368af0408b0.png)
+
 
