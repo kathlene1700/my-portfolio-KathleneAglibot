@@ -1,0 +1,415 @@
+<!doctype html>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', SansSerif;
+}
+
+body {
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background-color: #fff;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+}
+.container .left_Side {
+    position: relative;
+    background-color: #003147;
+    padding: 40px;
+}
+.profileText{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.profileText .imgBx {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profileText .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.photo {
+    width: 100%;
+    height: auto;
+}
+.profileText h2 {
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.profileText h2 span{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+.contactInfo {
+    padding-top: 40px;
+}
+.title{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.contactInfo ul {
+    position: relative;
+}
+.contactInfo ul li {
+    list-style: none;
+    position: relative;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.contactInfo ul li .icon {
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+}
+.contactInfo ul li span{
+    color: #fff;
+    font-weight: 300;
+}
+.contactInfo.education li {
+    margin-bottom: 15px;
+}
+.contactInfo.education h5 {
+    color: #03a9f4;
+    font-weight: 500;
+}
+.contactInfo.education h4:nth-child(2) {
+    color: #fff;
+    font-weight: 500;
+}
+.contactInfo.education h4 {
+    color: #fff;
+    font-weight: 300;
+}
+.contactInfo.language .percent {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background-color: #081921;
+    display: block;
+    margin-top: 5px;
+}
+.contactInfo.language .percent div {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #03a9f4;
+}
+.container .right_Side {
+    position: relative;
+    background-color: #fff;
+    padding: 40px;
+}
+.about {
+    margin-bottom: 50px;
+}
+.about:last-child {
+    margin-bottom: 0;
+}
+.title2 {
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+p {
+    color: #081921;
+}
+.about .box {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+.about .box .year_company {
+    min-width: 150px;
+}
+.about .box .year_company h5 {
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+.about .box .text h4 {
+    text-transform: uppercase;
+    color: #2a7da2;
+    font-size: 16px;
+}
+.skills .box {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.skills .box h4 {
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 500;
+}
+.skills .box .percent {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background-color: #f0f0f0;
+}
+.skills .box .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #03a9f4;
+}
+.interest ul {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.interest ul li {
+    list-style: none;
+    color: black;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.interest ul li .fa {
+    color: #03a9f4;
+    font-size: 18px;
+    width: 20px;
+}
+@media (max-width: 1000px) {
+    .container {
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .interest ul {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width: 600px) {
+    .about .box{
+        flex-direction: column;
+    }
+    .about .box .year_company {
+        margin-bottom: 5px;
+    }
+    .interest ul {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .skills .box {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+.englishw50 {
+    width: 60%;
+}
+.russianw90 {
+    width: 90%;
+}
+.frenchw30{
+    width: 30%;
+}
+.htmlws30 {
+    width: 50%;
+}
+.cssws45 {
+   width: 45%;
+}
+.jsws70 {
+    width: 70%;
+}
+.phws40{
+   width: 40%;
+}
+.ilws60 {
+   width: 60%;
+}
+.adw70 {
+    width: 70%;
+}
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link= rel="stylesheet" type= "type/css" href= "resumekath.css">
+    <title>Kathlene Aglibot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/data.css">
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+    <script src="resumekath.js"></script>
+<div class="container">
+    <div class="left_Side">
+        <div class="profileText">
+            <div class="imgBx">
+                <img class="photo" src="/home/nucleio/Downloads/2x2.jpg" width ="200" height ="200">
+            </div>
+            <br>
+            <h2>Kathlene Aglibot <br><span>Intern</span> </h2>
+        </div>
+
+        <div class="contactInfo">
+            <h3 class="title">Contact Info</h3>
+            <ul>
+                <li>
+                    <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                    <span class="text">+639367373089</span>
+                </li>
+                <li>
+                    <span class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                    <span class="text">katkataglibot@gmail.com</span>
+                </li>
+                <li>
+                    <span class="icon"><i class="fa fa-globe" aria-hidden="true"></i></span>
+                    <span class="text">www.kathleneaglibot.com</span>
+                </li>
+                <li>
+                    <span class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
+                    <span class="text">www.linkedin/in/aglibot-kathlene-p-52b903218</span>
+                </li>
+                <li>
+                    <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                    <span class="text">San Pedro, Laguna</span>
+                </li>
+            </ul>
+        </div>
+        <div class="contactInfo education">
+            <h3 class="title">Education</h3>
+            <ul>
+                <li>
+                    <h5>2018 - Present</h5>
+                    <h4>Bachelor of Science in Electronics and Communication Engineering</h4>
+                    <h4>Polytechnic University of the Philippines - Santa Rosa Campus</h4>
+                </li>
+                <li>
+                    <h5>2016 - 2018</h5>
+                    <h4>Science, Technology, Engineering and Mathematics</h4>
+                    <h4>San Pedro College of Business Administration</h4>
+                </li>
+                <li>
+                    <h5>2012 - 2016</h5>
+                    <h4>Junior Highschool </h4>
+                    <h4>Pacita Complex National Highschool</h4>
+                </li>
+            </ul>
+        </div>
+        <div class="contactInfo language">
+            <h3 class="title">Languages</h3>
+            <ul>
+                <li>
+                    <span class="text">English</span>
+                    <span class="percent">
+                        <div data-language="english"></div>
+                    </span>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <span class="text">Filipino</span>
+                    <span class="percent">
+                        <div data-language="russian"></div>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="right_Side">
+        <div class="about">
+            <h2 class="title2">Profile</h2>
+            <p>A task-oriented engineering student who is eager to learn new skills and gain experience in different fields associated with chosen profession to help the company reach its goals while gaining valuable experience for career progress.
+            </p>
+        </div>
+        <div class="about">
+            <h2 class="title2">Experience</h2>
+            <div class="box">
+                <div class="year_company">
+                    <h5>2021 - Present</h5>
+                    <h5>Nucleio Technology IT Solutions</h5>
+                </div>
+                <div class="text">
+                    <h4>Software Developer Trainee</h4>
+                    <p>Maintenance of existing software products, designing new software, and installation and customization of software. </p>
+                </div>
+            </div>
+        </div>
+        <div class="about skills">
+            <h2 class="title2">Skills and Qualifications</h2>
+            <div class="box">
+                <h4>Microsoft Office Literate (Word, Excel, and Power Point)</h4>
+                <div class="percent">
+                    <div data-knowledge="html"></div>
+                </div>
+            </div>
+            <div class="box">
+                <h4>Basic knowledge in MatLab and Arduino</h4>
+                <div class="percent">
+                    <div data-knowledge="css"></div>
+                </div>
+            </div>
+            <div class="box">
+                <h4>Basic to Intermediate understanding in Electronics and Communication</h4>
+                <div class="percent">
+                    <div data-knowledge="js"></div>
+                </div>
+            </div>
+            <div class="box">
+                <h4>Possessing time-management, writing skills, task-oriented, organizattional and problem solving skills</h4>
+                <div class="percent">
+                    <div data-knowledge="photoshop"></div>
+                </div>
+            </div>
+        </div>
+        <div class="about interest">
+            <h2 class="title2">Interests</h2>
+            <ul>
+                <li><i class="fa fa-book" aria-hidden="true"></i> Reading</li>
+                <li><i class="fa fa-gamepad" aria-hidden="true"></i> Watching Anime</li>
+                <li><i class="fa fa-microphone" aria-hidden="true"></i> Sleeping</li>
+            </ul>
+        </div>
+
+
+    </div>
+</div>
+</body>
+</html>
